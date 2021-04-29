@@ -202,7 +202,7 @@ if __name__ == "__main__":
 
     if data_mode == "cub":
         word_map = tf.load(
-        "data/cvpr2016_cub/vocab_c10.t7" ,
+        "data_cub/cvpr2016_cub/vocab_c10.t7" ,
         force_8bytes_long=True,
         )
         word_map = {word_map[i]: i for i in word_map}
