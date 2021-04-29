@@ -1,0 +1,1 @@
+- put checkpoints in the models folder and link them in hyperparameters.py
