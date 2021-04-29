@@ -53,5 +53,8 @@ Once the data is prepared, please specify the hyperparameters (found in hyperpar
 - the model will be saved for later use in the models folder. Make sure it exists. 
 
 To train the model to make it suitable for justification tasks (-> dependent on class) rund:
+```console
+(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python train_justify.py
+```
 $ python train_justify.py
 
