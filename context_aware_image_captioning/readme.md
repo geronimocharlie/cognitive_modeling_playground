@@ -3,12 +3,12 @@
 ### CUB Datasest
 
 #### Option A: preprocessed (recommended)
-Please download the preprocced dataset and place it under the 'data_cub' folder. You can download it from here: 
+Please download the preprocessed dataset and place it under the 'data_cub' folder. You can download it from here: 
 https://drive.google.com/file/d/1WSlU_22In3sfHCGV6_KXlgfTDR6OR0-L/view?usp=sharing
 
 
-#### Option B: preprocces yourself
-In order do preprocess the cub dataset, you will need to download the images form here and the annotiations from here. Mawe sure the foleders are named 'CUB_200_2011' and 'cvpr2016_cub' respectiveley. Place both folders under the 'data_cub' folder. Then excecute 'cub_preprocess.py'. 
+#### Option B: preprocess yourself
+In order to preprocess the cub dataset, you will need to download the images form here and the annotiations from here. Mawe sure the foleders are named 'CUB_200_2011' and 'cvpr2016_cub' respectiveley. Place both folders under the 'data_cub' folder. Then excecute 'cub_preprocess.py'. 
 
 *Note*: It might be the case that some of the bird names do not mathc. In the annotiations folder rename the following files in all subfolders: 
 - cvpr2016_cub
