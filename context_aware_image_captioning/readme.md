@@ -1,5 +1,5 @@
 # Context Aware Image Captioning
-This repo is an attempt to build upon the work of  (paper: , github:). The code is mostly copied, with a few alterations to incorporate the coco dataset and a modification of the beamsearch algorithm to incorporate multiple distractor classes. 
+This repo is an attempt to build upon the work of  ([paper](https://arxiv.org/pdf/1701.02870.pdf) , [github](https://github.com/saiteja-talluri/Context-Aware-Image-Captioning)). The code is mostly copied, with a few alterations to incorporate the coco dataset and a modification of the beamsearch algorithm to incorporate multiple distractor classes. 
 
 The Beamsearch can be executed with a few sample images, a pretrained model (refer to the 'Beamsearch' section) and the infos on the vocabulary. For the coco data this works out of the box, for the cub dataset at least the annotations must be downloaded, pleares refere to CUB Ditaset section for more infos. 
 If you wish to run the training please refer to the section on 'Training'. 
