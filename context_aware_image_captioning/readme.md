@@ -66,7 +66,7 @@ To train the model to make it suitable for justification tasks (-> dependent o
 
 ## Beamsearch
 
-To execute the beamsearch you will need to download or create a pretrained model. A pretrained model on a subset (1000 images of the validation set of coco) can be found [here]()j
+To execute the beamsearch you will need to download or create a pretrained model. A pretrained model on a subset (1000 images of the validation set of coco) can be found [here](https://drive.google.com/file/d/1FOQF8XwDT1DpxaBaWi6vEnm-cTP5hVLR/view?usp=sharing)
 Please make sure to adjust the path to your pretrained model (checkpoint_j for justifications) in the hyperparameters.py script. You can also alter the lambda parameter and beam size there. 
 
 Also testing images will be needed. You can use the ones provided in the test_images folder or place your own there. 
