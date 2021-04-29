@@ -27,7 +27,7 @@ In order to preprocess the cub dataset, you will need to download the images for
       - Henslows_Sparrow into Henslow_Sparrow
       - " Le_Conte_Sparrow
       - " Lincoln_Sparrow
-      - Nelsons_Sparrow into Nelson_Sharp_tailed_Sparrow (now you guys are just mocking me right?)
+      - Nelsons_Sparrow into Nelson_Sharp_tailed_Sparrow 
       - " Swainson_Warbler
       - " Wilson_Warbler
       - " Bewick_Wren
