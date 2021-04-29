@@ -2,7 +2,7 @@
 
 ### CUB Datasest
 
-#### Option A: preprocessed 
+#### Option A: preprocessed (recommended)
 Please download the preprocced dataset and place it under the 'data_cub' folder. You can download it from here: 
 https://drive.google.com/file/d/1WSlU_22In3sfHCGV6_KXlgfTDR6OR0-L/view?usp=sharing
 
