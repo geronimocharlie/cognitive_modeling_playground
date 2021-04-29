@@ -1,0 +1,3 @@
+[submodule "context_aware_image_captioning/cocoapi"]
+	path = context_aware_image_captioning/cocoapi
+	url = https://github.com/cocodataset/cocoapi
