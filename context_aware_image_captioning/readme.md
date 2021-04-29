@@ -12,6 +12,8 @@ In order do preprocess the cub dataset, you will need to download the images for
 
 *Note*: It might be the case that some of the bird names do not mathc. In the annotiations folder rename the following files in all subfolders: 
 - cvpr2016_cub
+
+
       - Brewers_Blackbird into Brewer_Blackbird
       - Chuck_wills_Widow into Chuck_will_Widow
       - Brandts_Cormorant into Brandt_Cormorant
