@@ -1,3 +1,8 @@
+'''
+Vocabulary for the coco dataset.
+'''
+
+
 import nltk
 import pickle
 import os.path
