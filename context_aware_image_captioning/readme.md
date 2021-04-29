@@ -1,5 +1,13 @@
 ## Preparing the data
 
+### COCO Dataset
+To work with the Coco Dataset we use the CocoAPI(https://github.com/cocodataset/cocoapi/tree/8c9bcc3cf640524c4c20a9c40e89cb6a2f2fa0e9). (The repo is embedded in this repo, but if it is not cloned together with this repo please downolad manually and place it inside here). 
+In addition to this API, please download both the COCO images and annotations to run training. We use the Coco2014 data.
+-Please download, unzip, and place the images ([train images](http://images.cocodataset.org/zips/train2014.zip) and [val images](http://images.cocodataset.org/zips/val2014.zip) in: 'coco/images/'
+-Please download and place the annotations ([train and val annotations](http://images.cocodataset.org/annotations/annotations_trainval2014.zip)  in 'coco/annotations'
+
+For substantially more details on the API please see http://cocodataset.org/#download.
+
 ### CUB Datasest
 
 #### Option A: preprocessed (recommended)
