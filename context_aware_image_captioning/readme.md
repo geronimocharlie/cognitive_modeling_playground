@@ -32,7 +32,8 @@ For substantially more details on the API please see http://cocodataset.org/#dow
 #### CUB Datasest
 
 ##### Option A: preprocessed (recommended)
-Please download the preprocessed dataset and place it under the 'data_cub' folder. You can download it from [here](https://drive.google.com/file/d/1WSlU_22In3sfHCGV6_KXlgfTDR6OR0-L/view?usp=sharing)
+Please download the preprocessed dataset and place it under the 'data_cub' folder. You can download it from [here](https://drive.google.com/file/d/1WSlU_22In3sfHCGV6_KXlgfTDR6OR0-L/view?usp=sharing).
+For the beamsearch to work, please also download the captions from [here](https://drive.google.com/file/d/0B0ywwgffWnLLZW9uVHNjb2JmNlE/view) and place them under data_coco. (Needed for the vocabulary) 
 
 
 ##### Option B: preprocess yourself
