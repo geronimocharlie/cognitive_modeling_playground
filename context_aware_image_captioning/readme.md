@@ -72,10 +72,27 @@ Please make sure to adjust the path to your pretrained model (checkpoint_j for j
 Also testing images will be needed. You can use the ones provided in the test_images folder or place your own there. 
 
 If running on the coco dataset, you can get an overview of the existing classes by running: 
-
+```console
+(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python data_coco/ontology_feeder.py
+```
 
 To excecute the original beamsearch algorithm:
 
+    Justification: python beamsearch.py cj target_image_path target_class distractor_class
+    e.g. python beamsearch.py cj 'test_images/moto.jpg' 4 3
 
-To perform beamsearch on the justification task
+    Context agnostic captioning: python beamsearch.py c image_path
+   
+    Discrimination: python beamsearch.py cd target_image_path distractor_image_path
 
+
+To perform beamsearch on the justification task for **multiple** distractor classes:
+
+```console
+(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python beamsearch_j_multi_d.py  target_image_path target_class distractor_class_1 distractor_class_2 ...
+```
+example: 
+
+```console
+(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python beamsearch_j_multi_d.py 'test_images/moto.jpg' 4 2 3 5
+```
