@@ -8,8 +8,8 @@ If you wish to run the training please refer to the section on 'Training'.
 Pleas create a conda environment using the provided 'environment.yml' file.
 
 ```console
-yourname@device:~/your_path_to…project/context-aware-image-captioning$ conda env create -f environment.yml
-yourname@device:~/your_path_to…project/context-aware-image-captioning$ conda activate
+yourname@device:~/your_path_to…project$ conda env create -f environment.yml
+yourname@device:~/your_path_to…project$ conda activate
 ```
 
 ## 2 Training (optional) 
@@ -61,7 +61,7 @@ Once the data is prepared, please specify the hyperparameters (found in hyperpar
 
 To train the model to make it suitable for justification tasks (-> dependent on class) run:
 ```console
-(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python train_justify.py
+(caic) yourname@device:~/your_path_to…project$ python train_justify.py
 ```
 
 ## Beamsearch
@@ -73,7 +73,7 @@ Also testing images will be needed. You can use the ones provided in the test_im
 
 If running on the coco dataset, you can get an overview of the existing classes by running: 
 ```console
-(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python data_coco/ontology_feeder.py
+(caic) yourname@device:~/your_path_to…project$ python data_coco/ontology_feeder.py
 ```
 
 To excecute the original beamsearch algorithm:
@@ -89,10 +89,10 @@ To excecute the original beamsearch algorithm:
 To perform beamsearch on the justification task for **multiple** distractor classes:
 
 ```console
-(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python beamsearch_j_multi_d.py  target_image_path target_class distractor_class_1 distractor_class_2 ...
+(caic) yourname@device:~/your_path_to…project$ python beamsearch_j_multi_d.py  target_image_path target_class distractor_class_1 distractor_class_2 ...
 ```
 example: 
 
 ```console
-(caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python beamsearch_j_multi_d.py 'test_images/moto.jpg' 4 2 3 5
+(caic) yourname@device:~/your_path_to…project$ python beamsearch_j_multi_d.py 'test_images/moto.jpg' 4 2 3 5
 ```
