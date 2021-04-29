@@ -4,8 +4,15 @@ This repo is an attempt to build upon the work of  (paper: , github:). The cod
 The Beamsearch can be executed with a few sample images and a pretrained model, thus downloading and preparing the dataset is not possible. For more information see the section on 'Beamsearch'. 
 If you wish to run the training please refer to the section on 'Training'. 
 
+## 1 Installation 
+Pleas create a conda environment using the provided 'environment.yml' file.
 
-## Training
+```console
+yourname@device:~/your_path_to…project/context-aware-image-captioning$ conda env create -f environment.yml
+yourname@device:~/your_path_to…project/context-aware-image-captioning$ conda activate
+```
+
+## 2 Training (optional) 
 ### Preparing the data
 
 #### COCO Dataset
