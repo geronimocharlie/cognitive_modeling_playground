@@ -54,14 +54,28 @@ In order to preprocess the cub dataset, you will need to download the images and
       - " Wilson_Warbler
       - " Bewick_Wren
 
-### Train. 
+### Train
 Once the data is prepared, please specify the hyperparameters (found in hyperparameters.py) to your liking. 
 - make sure to set the data_mode to 'cub' or 'coco' dependent on what data you have at hand
 - the model will be saved for later use in the models folder. Make sure it exists. 
 
-To train the model to make it suitable for justification tasks (-> dependent on class) rund:
+To train the model to make it suitable for justification tasks (-> dependent on class) run:
 ```console
 (caic) yourname@device:~/your_path_to…project/context-aware-image-captioning$ python train_justify.py
 ```
-$ python train_justify.py
+
+## Beamsearch
+
+To execute the beamsearch you will need to download or create a pretrained model. A pretrained model on a subset (1000 images of the validation set of coco) can be found [here]()j
+Please make sure to adjust the path to your pretrained model (checkpoint_j for justifications) in the hyperparameters.py script. You can also alter the lambda parameter and beam size there. 
+
+Also testing images will be needed. You can use the ones provided in the test_images folder or place your own there. 
+
+If running on the coco dataset, you can get an overview of the existing classes by running: 
+
+
+To excecute the original beamsearch algorithm:
+
+
+To perform beamsearch on the justification task
 
