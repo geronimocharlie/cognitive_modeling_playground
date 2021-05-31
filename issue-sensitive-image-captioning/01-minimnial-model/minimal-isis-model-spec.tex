@@ -1,0 +1,68 @@
+\documentclass[fleqn,reqno,10pt]{article}
+
+\usepackage{myarticlestyledefault}
+\usepackage[margin=2cm]{geometry}
+\title{Minimal model for ISIC}
+\author{}
+\date{}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\section{The ISIC model}
+
+The issue-sensitive image captioning model (ISIC model) by \cite{NieCohn-Gordon2020:Pragmatic-Issue} is defined as follows:
+
+\begin{itemize}
+  \item $\mathcal{I}$ is a set of images; $W$ is the lexicon (a set of words); sequences of words (of arbitrary positive length) are denoted as $\vec{w}$
+  \item the \textbf{literal speaker $S_{0}$} is given by a pretrained language model:
+        \begin{align*}
+          S_0(\vec{w} \mid i) \ \ \ \ \ \textcolor{gray}{\text{[pretrained]}}
+        \end{align*}
+  \item the \textbf{pragmatic listener $L_{1}$} is defined via Bayes rule (where prior probabilities $P(i)$ are assumed to be flat)
+        \begin{align*}
+          L_1(i \mid \vec{w}) \propto P(i) \ S_0(\vec{w} \mid i)
+        \end{align*}
+  \item the \textbf{issue-sensitive speaker} is defined in terms of three utility components:
+        \begin{align*}
+          S_{1}(\vec{w} \mid i, C) & \propto \expo \left [  \alpha ((1-\beta) U_1(i, \vec{w}, C) + \beta U_2(i, \vec{w}, C)) - \text{Cost}(i, \vec{w}) \right ] \ \text{, where}
+          \\
+          U_1(i, \vec{w}, C) & = \log L(C(i) \mid \vec{w})
+          \\
+          U_2(i, \vec{w}, C) & = \mathcal{H} ( L_{1}(\cdot \mid \vec{w} , C(i)) )
+          \\
+          \text{Cost}(i, \vec{w}) & = - \log S_0 (\vec{w} \mid i)
+        \end{align*}
+\end{itemize}
+
+\section{Minimal model setup}
+
+To explore the behavior and predictions of this model outside of neural language models, we can look at a minimalized, discrete setup with a ground-truth semantics.
+
+\begin{itemize}
+  \item $\mathcal{I} = F_{1} \times \dots \times F_{n}$ is a set of objects identified uniquely via a list of $n$ features $F_{1}, \dots, F_{n}$. All $F_{j}$ are non-empty, finite sets which do not contain $\emptyset$ and are mutually disjoint. $k_{j}$ is the number of feature values in feature set $F_{j}$.
+  \item Instead of words and sequences thereof, we look at a set of \textbf{messages} $\mathcal{M} = F_{1}' \times \dots \times F_{n}'$, where $F_{j}' = F_{j} \cup \set{\emptyset}$.
+  \item The \textbf{meaning function} $\mathcal{B} \colon \mathcal{I} \times \mathcal{M} \rightarrow [0;1]$ is defined as:
+        \begin{align*}
+          \mathcal{B}(i,m) =
+          \begin{cases}
+            1 & \text{if } \forall j ((1 \le j \le n) \wedge (m_j \neq \emptyset)) \rightarrow m_j = i_j
+            \\
+            \epsilon & \text{otherwise}.
+          \end{cases}
+        \end{align*}
+  \item An \textbf{issue} is a partition on $\mathcal{I}$ derived from a feature. The partition $C^{j}$ derived from feature $j$ is:
+        \begin{align*}
+          C^i = \set{ \set{i \in \mathcal{I} \mid i_j = f} \mid f \in F_j}
+        \end{align*}
+  \item The \textbf{literal speaker} is defined as:
+        \begin{align*}
+          S_0(m \mid i) \propto \mathcal{B}(i,m)
+        \end{align*}
+  \item The \textbf{parameters} of this setup are $n$, the list of $k_{j}$, $\alpha$ and $\beta$ and $\epsilon$. The most basic case is $n=3$ and $k_{j}=2$ for all $j$. $\epsilon$ is supposed to be small, e.g., $1\times10^{-4}$. For extreme (noise-free) predictions, we can set $\epsilon = 0$ and $\alpha \rightarrow \infty$.
+\end{itemize}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
